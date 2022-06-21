@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Clock Me In</title>
 </head>
@@ -14,14 +17,18 @@
         <img src="./images/logo.png" alt="">
     </nav>
     <section class="hero-section">
-        <h2>Clock Me In</h2>
+        <div class="effects">
+            <h2>Clock Me In</h2>
+            <p class="hero-text">Keeping your attendance data safe while incresing your productivity</p>
+
+        </div>
     </section>
     <div id="map">
 
     </div>
     <div class="input-fields">
         <input id="username" type="text" placeholder="Full Name">
-        <input  type="text" placeholder="Work ID">
+        <input type="text" placeholder="Work ID">
         <input type="text" placeholder="Guard on Duty">
         <input class="comment-input" type="text" placeholder="Add Comment">
 
@@ -36,8 +43,8 @@
         <!-- <p id="region_code"></p> -->
         <p id="latitude"></p>
         <p id="org"></p>
-        <button id="submit" class="btn">Clock Me In</button>
     </div>
+    <button id="submit" class="btn">Clock Me In</button>
 
 
 

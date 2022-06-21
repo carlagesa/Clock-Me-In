@@ -1,16 +1,16 @@
 
-function getLocation(){
+function getLocation() {
   //Checks if the browser supports geolocation API or not
-  if(navigator.geolocation){
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(onSuccess, onError)
   }
-  else{
+  else {
     alert("Your browser does not support Geoloation API")
   }
-  function onSuccess(data){
+  function onSuccess(data) {
     console.log(data)
   }
-  function onError(data){
+  function onError(data) {
     alert(err)
   }
 }
@@ -31,14 +31,14 @@ fetch('https://ipapi.co/json/')
   .then(function (response) {
     response.json().then(jsonData => {
       //Parsing the data into html with specific id's
-      Ip.innerHTML = jsonData.ip
+      Ip.innerHTML = 'IP :' + " " + jsonData.ip
       // version.innerHTML = jsonData.version
-      country.innerHTML = jsonData.country_name
-      city.innerHTML = jsonData.city
-      region.innerHTML = jsonData.region
+      country.innerHTML = 'Country :' + " " + jsonData.country_name
+      city.innerHTML = 'City :' + " " + jsonData.city
+      region.innerHTML = 'Region :' + " " + jsonData.region
       // region_code.innerHTML = jsonData.region_code
-      org.innerHTML = jsonData.org
-      latitude.innerHTML = jsonData.latitude
+      org.innerHTML = 'ISP :' + " " + jsonData.org
+      latitude.innerHTML = 'Lat :' + " " + jsonData.latitude
 
       console.log(jsonData);
     });
@@ -47,31 +47,31 @@ fetch('https://ipapi.co/json/')
     console.log(error)
   });
 
-  document.getElementById("submit").addEventListener("click", submit)
-  document.addEventListener("DOMContentLoaded", submit)
+document.getElementById("submit").addEventListener("click", submit)
+document.addEventListener("DOMContentLoaded", submit)
 
-  setInterval(() => {
-    if (
-      document.getElementById("username").value == "" 
-      // document.getElementById("password").value == ""
-    ) {
-      document.getElementById("submit").setAttribute("disabled", "");
-    } else {
-      document.getElementById("submit").removeAttribute("disabled");
-    }
-  });
-  
-  // function check(form) {
-  //   if (form.username.value && form.password.value) {
-  //     var username = document.getElementById("username").value;
-  //   } else {
-  //     alert("Error Password or Username");
-  //   }
-  // }
-  
-  document.getElementById("submit").onclick = function submit() {
-    // window.location.href = "../../menu.html";
-    var username = document.getElementById("username").value;
-  
-    alert(username + " " + "clocked in!");
-  };
+setInterval(() => {
+  if (
+    document.getElementById("username").value == ""
+    // document.getElementById("password").value == ""
+  ) {
+    document.getElementById("submit").setAttribute("disabled", "");
+  } else {
+    document.getElementById("submit").removeAttribute("disabled");
+  }
+});
+
+// function check(form) {
+//   if (form.username.value && form.password.value) {
+//     var username = document.getElementById("username").value;
+//   } else {
+//     alert("Error Password or Username");
+//   }
+// }
+
+document.getElementById("submit").onclick = function submit() {
+  // window.location.href = "../../menu.html";
+  var username = document.getElementById("username").value;
+
+  alert(username + " " + "clocked in!");
+};

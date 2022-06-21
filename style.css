@@ -1,24 +1,53 @@
 body {
-    
+    margin-bottom: 10vh;
+    font-family: 'Orbitron', sans-serif;
 }
-.hero-section{
-    background: url("./images/hero.jpg"),
-     linear-gradient(-45deg, #fbbe6b, #f13ea3);
-     background-size: cover;
+
+.hero-section {
+    background: url("./images/hero.jpg");
+    /* ,linear-gradient(-45deg, #fbbe6b, #f13ea3); */
+
+    background-size: cover;
     width: 100%;
     height: 70vh;
 }
+
+.effects {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 50%;
+    height: 50%;
+    margin-left: 45vh;
+    padding-top: 10vh;
+}
+
+h2 {
+    margin-top: 0.1vh;
+    margin-bottom: 0.1vh;
+
+    text-align: center;
+    color: #18978F;
+    font-size: clamp(100px, 5vw, 55px);
+}
+
+.hero-text {
+    padding-top: 0.1vh;
+    color: #000;
+    font-weight: bold;
+}
+
 img {
     width: 40px;
 }
 
 .navBar {
     width: 100%;
-    background-color: rgb(21, 120, 250);
+    background-color: #18978F;
 }
 
 .metrics-container {
-    background-color: rgb(21, 120, 250);
+    background-color: #18978F;
     width: 70vh;
     height: 45vh;
     border-radius: 10px;
@@ -27,10 +56,11 @@ img {
 }
 
 p {
-    color: white;
+    color: #f1f1f1;
     text-align: center;
-    padding-top: 10px;
-    margin-top: 10px;
+    font-size: x-large;
+    padding-top: 0vh;
+    margin-top: 0vh;
 }
 
 .btn {
@@ -38,14 +68,20 @@ p {
     height: 4vh;
     border: none;
     border-radius: 5px;
-    background-color: whitesmoke;
-    margin-left: 27vh;
-    margin-top: 20px;
+    color: #f1f1f1;
+    background-color: #18978F;
+    margin-top: 15px;
+    margin-left: 26vh;
+    /* margin-top: 20px; */
     cursor: pointer;
 }
-/* .btn:hover{
-    
-} */
+.btn:hover{
+    border: 2px solid #18978F;
+    border-radius: 5px;
+    color: #000;
+    background-color: #ffff;
+}
+
 
 .input-fields {
     /* background-color: rgb(21, 120, 250); */
@@ -64,18 +100,20 @@ input {
     height: 5vh;
     border: none;
     border-radius: 5px;
-    background-color: rgb(240, 246, 252);
+    background-color: #18978e31;
 }
-.comment-input{
+
+.comment-input {
     display: flex;
     margin-top: 15px;
     margin-left: 6vh;
     width: 80%;
-    height: 17vh;
+    height: 23vh;
     border: none;
     border-radius: 5px;
-    background-color: rgb(240, 246, 252);
+    background-color: #18978e31;
 }
 
-input::placeholder{
-color: black;}
+input::placeholder {
+    color: black;
+}
