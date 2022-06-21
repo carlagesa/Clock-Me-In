@@ -13,14 +13,17 @@
     <nav class="navBar">
         <img src="./images/logo.png" alt="">
     </nav>
+    <section class="hero-section">
+        <h2>Clock Me In</h2>
+    </section>
     <div id="map">
 
     </div>
     <div class="input-fields">
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Work ID">
+        <input id="username" type="text" placeholder="Full Name">
+        <input  type="text" placeholder="Work ID">
         <input type="text" placeholder="Guard on Duty">
-        <input type="text" placeholder="Add Comment">
+        <input class="comment-input" type="text" placeholder="Add Comment">
 
     </div>
 
@@ -32,9 +35,11 @@
         <p id="region">Region name here</p>
         <!-- <p id="region_code"></p> -->
         <p id="latitude"></p>
-        <p id="country_calling_code"></p>
-        <button class="btn">Clock Me In</button>
+        <p id="org"></p>
+        <button id="submit" class="btn">Clock Me In</button>
     </div>
+
+
 
 
     <script src="main.js"></script>

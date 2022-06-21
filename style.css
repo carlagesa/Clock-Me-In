@@ -1,5 +1,13 @@
-body {}
-
+body {
+    
+}
+.hero-section{
+    background: url("./images/hero.jpg"),
+     linear-gradient(-45deg, #fbbe6b, #f13ea3);
+     background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
 img {
     width: 40px;
 }
@@ -35,6 +43,9 @@ p {
     margin-top: 20px;
     cursor: pointer;
 }
+/* .btn:hover{
+    
+} */
 
 .input-fields {
     /* background-color: rgb(21, 120, 250); */
@@ -54,5 +65,17 @@ input {
     border: none;
     border-radius: 5px;
     background-color: rgb(240, 246, 252);
-
 }
+.comment-input{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 6vh;
+    width: 80%;
+    height: 17vh;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(240, 246, 252);
+}
+
+input::placeholder{
+color: black;}
