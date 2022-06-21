@@ -1,8 +1,58 @@
+body {}
 
-img{
+img {
     width: 40px;
 }
-.navBar{
+
+.navBar {
     width: 100%;
-background-color: rgb(21, 120, 250);
+    background-color: rgb(21, 120, 250);
+}
+
+.metrics-container {
+    background-color: rgb(21, 120, 250);
+    width: 70vh;
+    height: 45vh;
+    border-radius: 10px;
+    margin-top: -46vh;
+    margin-left: 100vh;
+}
+
+p {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 15vh;
+    height: 4vh;
+    border: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 27vh;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.input-fields {
+    /* background-color: rgb(21, 120, 250); */
+    width: 70vh;
+    height: 45vh;
+    border-radius: 10px;
+    margin-top: 5vh;
+    margin-left: 20vh;
+}
+
+input {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 6vh;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(240, 246, 252);
+
 }
