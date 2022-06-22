@@ -14,16 +14,19 @@ function getLocation() {
 }
 getLocation();
 
+
+const workIP = document.getElementById("work-ip");
 //Obtaining html emelemnts using getElementById() method
 const Ip = document.getElementById("Ip");
 // const version = document.getElementById("version")
 const city = document.getElementById("city");
+
 const region = document.getElementById("region");
 // const region_code = document.getElementById("region_code")
 const org = document.getElementById("org");
 const latitude = document.getElementById("latitude");
 const country = document.getElementById("country");
-const flag = document.getElementById("flag")
+const flag = document.getElementById("flag");
 
 //Fetching data from the API then converting it into JSON
 fetch(
@@ -34,6 +37,7 @@ fetch(
     response.json().then((jsonData) => {
       //Parsing the data into html with specific id's
       Ip.innerHTML = "IP :" + " " + jsonData.ip;
+      workIP.innerHTML = "Work IP" + " " + jsonData.ip;
       // // version.innerHTML = jsonData.version
       country.innerHTML = "Country :" + " " + jsonData.country_name;
       // flag.innerHTML = jsonData.country_flag;
@@ -42,12 +46,7 @@ fetch(
       // region_code.innerHTML = jsonData.state_prov;
       org.innerHTML = "ISP :" + " " + jsonData.isp;
       latitude.innerHTML =
-        "Lat :" +
-        " " +
-        jsonData.latitude +
-        " " +
-        "Long " +
-        jsonData.longitude;
+        "Lat :" + " " + jsonData.latitude + " " + "Long " + jsonData.longitude;
 
       console.log(jsonData);
     });
@@ -57,12 +56,13 @@ fetch(
   });
 
 document.getElementById("submit").addEventListener("click", submit);
-document.addEventListener("DOMContentLoaded", submit);
+document.addEventListener("DOMContentLoaded", getLocation);
 
 setInterval(() => {
   if (
-    document.getElementById("username").value == ""
+    document.getElementById("username").value == "" ||
     // document.getElementById("password").value == ""
+    document.getElementById("work-ip") === jsonData.Ip
   ) {
     document.getElementById("submit").setAttribute("disabled", "");
   } else {
@@ -79,7 +79,6 @@ setInterval(() => {
 // }
 
 document.getElementById("submit").onclick = function submit() {
-  // window.location.href = "../../menu.html";
   var username = document.getElementById("username").value;
 
   alert(username + " " + "clocked in!");
