@@ -23,7 +23,7 @@ const region = document.getElementById("region");
 const org = document.getElementById("org");
 const latitude = document.getElementById("latitude");
 const country = document.getElementById("country");
-const flag = document.getElementById("flag")
+const flag = document.getElementById("flag");
 
 //Fetching data from the API then converting it into JSON
 fetch(
@@ -42,12 +42,7 @@ fetch(
       // region_code.innerHTML = jsonData.state_prov;
       org.innerHTML = "ISP :" + " " + jsonData.isp;
       latitude.innerHTML =
-        "Lat :" +
-        " " +
-        jsonData.latitude +
-        " " +
-        "Long " +
-        jsonData.longitude;
+        "Lat :" + " " + jsonData.latitude + " " + "Long " + jsonData.longitude;
 
       console.log(jsonData);
     });
@@ -55,6 +50,7 @@ fetch(
   .catch(function (error) {
     console.log(error);
   });
+  
 
 document.getElementById("submit").addEventListener("click", submit);
 document.addEventListener("DOMContentLoaded", submit);
