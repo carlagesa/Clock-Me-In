@@ -60,11 +60,12 @@ document.addEventListener("DOMContentLoaded", getLocation);
 
 setInterval(() => {
   if (
-    document.getElementById("username").value == "" ||
+    document.getElementById("username").value == "" 
     // document.getElementById("password").value == ""
-    document.getElementById("work-ip") === jsonData.Ip
+    // document.getElementById("work-ip").value ==  Ip.jsonData.ip
   ) {
     document.getElementById("submit").setAttribute("disabled", "");
+   
   } else {
     document.getElementById("submit").removeAttribute("disabled");
   }
