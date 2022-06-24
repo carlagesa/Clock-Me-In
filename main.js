@@ -56,7 +56,6 @@ fetch(
   });
   
 
-<<<<<<< HEAD
 // document.getElementById("submit").addEventListener("click", submit);
 // document.addEventListener("DOMContentLoaded", submit);
 
@@ -70,23 +69,6 @@ fetch(
 //     document.getElementById("submit").removeAttribute("disabled");
 //   }
 // });
-=======
-document.getElementById("submit").addEventListener("click", submit);
-document.addEventListener("DOMContentLoaded", getLocation);
-
-setInterval(() => {
-  if (
-    document.getElementById("username").value == "" 
-    // document.getElementById("password").value == ""
-    // document.getElementById("work-ip").value ==  Ip.jsonData.ip
-  ) {
-    document.getElementById("submit").setAttribute("disabled", "");
-   
-  } else {
-    document.getElementById("submit").removeAttribute("disabled");
-  }
-});
->>>>>>> 1c147f3a025581ed1d3d696b26826dd8a3e9ce5a
 
 // function check(form) {
 //   if (form.username.value && form.password.value) {
@@ -96,14 +78,9 @@ setInterval(() => {
 //   }
 // }
 
-<<<<<<< HEAD
 // document.getElementById("submit").onclick = function submit() {
 //   // window.location.href = "../../menu.html";
 //   var username = document.getElementById("username").value;
-=======
-document.getElementById("submit").onclick = function submit() {
-  var username = document.getElementById("username").value;
->>>>>>> 1c147f3a025581ed1d3d696b26826dd8a3e9ce5a
 
 //   alert(username + " " + "clocked in!");
 // };
