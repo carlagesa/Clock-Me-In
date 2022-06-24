@@ -14,10 +14,13 @@ function getLocation() {
 }
 getLocation();
 
+
+const workIP = document.getElementById("work-ip");
 //Obtaining html emelemnts using getElementById() method
 const Ip = document.getElementById("Ip");
 // const version = document.getElementById("version")
 const city = document.getElementById("city");
+
 const region = document.getElementById("region");
 // const region_code = document.getElementById("region_code")
 const org = document.getElementById("org");
@@ -34,6 +37,7 @@ fetch(
     response.json().then((jsonData) => {
       //Parsing the data into html with specific id's
       Ip.innerHTML = "IP :" + " " + jsonData.ip;
+      workIP.innerHTML = "Work IP" + " " + jsonData.ip;
       // // version.innerHTML = jsonData.version
       country.innerHTML = "Country :" + " " + jsonData.country_name;
       // flag.innerHTML = jsonData.country_flag;
@@ -52,6 +56,7 @@ fetch(
   });
   
 
+<<<<<<< HEAD
 // document.getElementById("submit").addEventListener("click", submit);
 // document.addEventListener("DOMContentLoaded", submit);
 
@@ -65,6 +70,23 @@ fetch(
 //     document.getElementById("submit").removeAttribute("disabled");
 //   }
 // });
+=======
+document.getElementById("submit").addEventListener("click", submit);
+document.addEventListener("DOMContentLoaded", getLocation);
+
+setInterval(() => {
+  if (
+    document.getElementById("username").value == "" 
+    // document.getElementById("password").value == ""
+    // document.getElementById("work-ip").value ==  Ip.jsonData.ip
+  ) {
+    document.getElementById("submit").setAttribute("disabled", "");
+   
+  } else {
+    document.getElementById("submit").removeAttribute("disabled");
+  }
+});
+>>>>>>> 1c147f3a025581ed1d3d696b26826dd8a3e9ce5a
 
 // function check(form) {
 //   if (form.username.value && form.password.value) {
@@ -74,9 +96,14 @@ fetch(
 //   }
 // }
 
+<<<<<<< HEAD
 // document.getElementById("submit").onclick = function submit() {
 //   // window.location.href = "../../menu.html";
 //   var username = document.getElementById("username").value;
+=======
+document.getElementById("submit").onclick = function submit() {
+  var username = document.getElementById("username").value;
+>>>>>>> 1c147f3a025581ed1d3d696b26826dd8a3e9ce5a
 
 //   alert(username + " " + "clocked in!");
 // };
