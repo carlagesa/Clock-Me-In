@@ -118,8 +118,10 @@ input::placeholder {
     color: black;
 }
 
-#list{
+
+ol{
     text-align: center  ;
+
 }
 /* Footer CSS */
 .footer{

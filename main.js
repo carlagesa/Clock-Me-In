@@ -24,7 +24,7 @@ const org = document.getElementById("org");
 const latitude = document.getElementById("latitude");
 const country = document.getElementById("country");
 const flag = document.getElementById("flag");
-
+const taskDate = document.getElementById("task");
 //Fetching data from the API then converting it into JSON
 fetch(
   "https://api.ipgeolocation.io/ipgeo?apiKey=acb67fe1fbde478aa15752488d784684"
@@ -35,6 +35,8 @@ fetch(
       //Parsing the data into html with specific id's
       Ip.innerHTML = "IP :" + " " + jsonData.ip;
       // // version.innerHTML = jsonData.version
+      // task.innerHTML = jsonData.time_zone.current_time
+      console.log(jsonData.time_zone.current_time);
       country.innerHTML = "Country :" + " " + jsonData.country_name;
       // flag.innerHTML = jsonData.country_flag;
       city.innerHTML = "City :" + " " + jsonData.country_capital;
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const task = document.createElement("li");
     task.textContent = taskContent;
     toDoContainer.appendChild(task);
+    
     form.reset();
   };
 
